@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+
+}
+
+.container-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+.container-formulario input,
+.container-formulario .btn-addProduct,
+.container-formulario .btn-update,
+.container-formulario section {
+    width: 50%;
+    align-self: center;
+    border-radius: 5px;
+    border-color: rgba(0, 97, 97, 0.5);
+    margin: 5px;
+
+}
+
+.container-formulario>label {
+    margin-left: 25%;
+    margin-right: 25%;
+    color: rgb(3, 71, 71);
+}
+
+
+.container-formulario h1 {
+    text-align: center;
+}
+
+.container-table {
+    display: flex;
+    width: 100%;
+    padding: 1%;
+
+}
+
+
+/* tabla */
+
+.container-table table {
+    width: 100%;
+    table-layout: fixed;
+    overflow-x: auto;
+}
+
+td {
+    border: 1px solid rgb(5, 83, 83);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(233, 237, 240);
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(55, 171, 218, 0.562);
+
+}
+
+th:nth-child(1) {
+    width: 5%;
+}
+
+th:nth-child(2) {
+    width: 20%;
+}
+
+th:nth-child(3) {
+    width: 10%;
+}
+
+
+th:nth-child(4) {
+    width: 15%;
+}
+
+
+th:nth-child(5) {
+    width: 20%;
+}
+
+th:nth-child(6) {
+    width: 6%;
+}
+
+th:nth-child(7) {
+    width: 6%;
+}
+
+thead th.btn {
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+}
+
+tbody .btn-delete {
+    border: none;
+    background-color: rgba(255, 0, 0, 0.651);
+}
+
+tbody .btn-delete:hover {
+    border: 1px solid rgb(14, 14, 14);
+    background-color: red;
+    text-shadow: 0 0 10px white, 0 0 20px white;
+    cursor: pointer;
+    padding: 0 10%;
+
+}
+
+tbody .btn-edit {
+    border: none;
+    background-color: rgba(0, 110, 255, 0.651);
+}
+
+tbody .btn-edit:hover {
+    border: 1px solid rgb(14, 14, 14);
+    background-color: rgb(0, 162, 255);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.658), 0 0 20px white;
+    cursor: pointer;
+    padding: 0 10%;
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .container-formulario {
+        width: 30%;
+        max-height: 50%;
+        position: sticky;
+        top: 0;
+    }
+
+    .container-formulario input,
+    .container-formulario .btn-addProduct,
+    .container-formulario .btn-update,
+    .container-formulario section {
+        width: 60%;
+    }
+
+    .container-formulario>label {
+        margin-left: 19%;
+    }
+
+
+    .container-table {
+        overflow-y: auto;
+        max-height: 100vh;
+    }
+}
